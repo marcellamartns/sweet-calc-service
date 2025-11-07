@@ -12,6 +12,7 @@ export type TProduto = {
 }
 
 export class Produto {
+  readonly id: string
   readonly nome: string
   readonly rendimento: number
   readonly dateTime: number
@@ -23,6 +24,7 @@ export class Produto {
   readonly descricao?: string
 
   private constructor(data: TProduto) {
+    this.id = data.id
     this.nome = data.nome
     this.rendimento = data.rendimento
     this.dateTime = data.dateTime
